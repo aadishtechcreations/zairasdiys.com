@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zairas DIYS — Creative DIYs made with love by Zaira Mansur.">
+  <title>Zairas DIYS 💕 | Zaira Mansur</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #fff4fa;
+      color: #4b1833;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    .heart {
+      position: fixed;
+      bottom: -60px;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0;
+      animation: floatHeart 10s linear infinite;
+    }
+
+    .heart:nth-child(1) {
+      left: 8%;
+      font-size: 24px;
+      animation-delay: 0s;
+    }
+
+    .heart:nth-child(2) {
+      left: 25%;
+      font-size: 18px;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(3) {
+      left: 47%;
+      font-size: 28px;
+      animation-delay: 4s;
+    }
+
+    .heart:nth-child(4) {
+      left: 70%;
+      font-size: 20px;
+      animation-delay: 1s;
+    }
+
+    .heart:nth-child(5) {
+      left: 88%;
+      font-size: 25px;
+      animation-delay: 5s;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 0.65;
+      }
+
+      85% {
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #ffd4e7;
+    }
+
+    .logo {
+      color: #df327f;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #ff76af;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav ul a {
+      color: #64203f;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul a:hover {
+      color: #e83e8c;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 7% 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          #ffd0e4 0,
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 5% 85%,
+          #ffe0ee 0,
+          transparent 32%
+        ),
+        #fff4fa;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 50px;
+      background: #ffe1ed;
+      color: #c62d72;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: 0.92;
+      color: #c82d73;
+      margin-bottom: 28px;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+      color: #ff76af;
+    }
+
+    .hero p {
+      color: #75435d;
+      font-size: 19px;
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .hero p strong {
+      color: #d52f78;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 27px;
+      border-radius: 50px;
+      font-weight: 800;
+      transition: 0.3s;
+    }
+
+    .primary {
+      color: white;
+      background: #e83e8c;
+      box-shadow: 0 12px 30px rgba(232,62,140,0.25);
+    }
+
+    .primary:hover {
+      background: #ca2f76;
+      transform: translateY(-4px);
+    }
+
+    .secondary {
+      color: #d42e77;
+      background: white;
+      border: 2px solid #ffc4dc;
+    }
+
+    .secondary:hover {
+      background: #fff0f7;
+      transform: translateY(-4px);
+    }
+
+    /* Hero Card */
+
+    .hero-art {
+      width: min(430px, 90vw);
+      height: 470px;
+      border-radius: 45px;
+      background: linear-gradient(
+        145deg,
+        #ffafd0,
+        #ffe7f2
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transform: rotate(3deg);
+      box-shadow: 0 30px 70px rgba(190,42,105,0.18);
+      z-index: 2;
+    }
+
+    .hero-art-inner {
+      text-align: center;
+      transform: rotate(-3deg);
+    }
+
+    .hero-heart {
+      font-size: 125px;
+      animation: heartbeat 2s ease-in-out infinite;
+      filter: drop-shadow(
+        0 15px 18px rgba(160,20,80,0.18)
+      );
+    }
+
+    @keyframes heartbeat {
+      0%,100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .hero-art h2 {
+      margin-top: 10px;
+      color: #b52467;
+      font-size: 34px;
+    }
+
+    .hero-art p {
+      margin-top: 8px;
+      color: #824d66;
+      font-size: 15px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 100px 7%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .eyebrow {
+      color: #e83e8c;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      color: #701d49;
+      font-size: clamp(38px, 5vw, 58px);
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin: 13px auto 0;
+      color: #86566d;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       SHOP
+    ========================= */
+
+    #shop {
+      background: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+      );
+      gap: 25px;
+    }
+
+    .product {
+      background: #fff8fc;
+      border: 1px solid #ffd6e8;
+      border-radius: 27px;
+      padding: 18px;
+      transition: 0.35s;
+    }
+
+    .product:hover {
+      transform: translateY(-9px);
+      box-shadow:
+        0 20px 45px rgba(190,46,109,0.13);
+    }
+
+    .product-image {
+      height: 210px;
+      border-radius: 20px;
+      background: linear-gradient(
+        135deg,
+        #ffd1e4,
+        #fff0f7
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 75px;
+      margin-bottom: 18px;
+    }
+
+    .product h3 {
+      color: #79204d;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: #8b6177;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      color: #df327f;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    #categories {
+      background: #fff1f8;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px,1fr)
+      );
+      gap: 20px;
+    }
+
+    .category {
+      background: white;
+      border: 1px solid #ffd9e9;
+      border-radius: 25px;
+      text-align: center;
+      padding: 30px 20px;
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-7px);
+      box-shadow:
+        0 15px 35px rgba(190,40,100,0.1);
+    }
+
+    .category-icon {
+      font-size: 48px;
+      margin-bottom: 13px;
+    }
+
+    .category h3 {
+      color: #79204d;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    #about {
+      background: white;
+    }
+
+    .about-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .owner-card {
+      padding: 55px 35px;
+      text-align: center;
+      border-radius: 38px;
+      background:
+        linear-gradient(
+          145deg,
+          #ffe0ed,
+          #fff2f8
+        );
+      box-shadow:
+        0 20px 50px rgba(190,40,100,0.09);
+    }
+
+    .owner-photo {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 7px solid #ffc1da;
+      font-size: 70px;
+    }
+
+    .owner-card h3 {
+      color: #b72567;
+      font-size: 28px;
+    }
+
+    .owner-card p {
+      margin-top: 7px;
+      color: #8a536c;
+    }
+
+    .about-text h2 {
+      color: #701d49;
+      font-size: clamp(36px,5vw,55px);
+      margin: 10px 0 22px;
+    }
+
+    .about-text p {
+      color: #765269;
+      line-height: 1.9;
+      margin-bottom: 15px;
+    }
+
+    .about-highlight {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 15px;
+      background: #fff0f7;
+      color: #d42f78;
+      font-weight: 800;
+    }
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    #why {
+      background: #fff1f8;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px,1fr)
+      );
+      gap: 25px;
+    }
+
+    .why-card {
+      padding: 33px 25px;
+      text-align: center;
+      border-radius: 26px;
+      background: white;
+    }
+
+    .why-card .icon {
+      font-size: 45px;
+    }
+
+    .why-card h3 {
+      color: #79204d;
+      margin: 15px 0 8px;
+    }
+
+    .why-card p {
+      color: #886075;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       OWNER BANNER
+    ========================= */
+
+    .owner-banner {
+      background: white;
+      text-align: center;
+      padding: 65px 7%;
+    }
+
+    .owner-banner h2 {
+      color: #701d49;
+      font-size: clamp(32px,5vw,50px);
+    }
+
+    .owner-banner h2 span {
+      color: #e83e8c;
+    }
+
+    .owner-banner p {
+      margin-top: 12px;
+      color: #87566d;
+      font-size: 17px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact {
+      text-align: center;
+      color: white;
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          #ffb7d4,
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #e83e8c,
+          #ff91bd
+        );
+    }
+
+    #contact h2 {
+      font-size: clamp(40px,6vw,67px);
+      margin-bottom: 15px;
+    }
+
+    #contact p {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .phone {
+      display: inline-block;
+      margin: 30px 0;
+      padding: 18px 32px;
+      background: white;
+      color: #d42f78;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 24px;
+      font-weight: 900;
+      box-shadow:
+        0 15px 35px rgba(100,0,50,0.15);
+      transition: 0.3s;
+    }
+
+    .phone:hover {
+      transform: scale(1.06);
+    }
+
+    .contact-owner {
+      margin-top: 10px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #541532;
+      color: #ffd7e8;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: #ff8fbd;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        padding: 16px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 135px 5% 80px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-art {
+        height: 390px;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      section {
+        padding: 75px 5%;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-art {
+        width: 100%;
+      }
+
+      .phone {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="heart">💗</div>
+  <div class="heart">💕</div>
+  <div class="heart">💖</div>
+  <div class="heart">💞</div>
+  <div class="heart">💗</div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="logo">
+      Zairas <span>DIYS 💕</span>
+    </div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        💗 Created with love by Zaira
+      </div>
+
+      <h1>
+        Make It.<br>
+        Create It.<br>
+        <span>Love It. 💕</span>
+      </h1>
+
+      <p>
+        Welcome to <strong>Zairas DIYS</strong> — a creative
+        destination filled with fun DIYs, crafts, and projects
+        made for people who love creating something special.
+      </p>
+
+      <div class="buttons">
+        <a href="#shop" class="btn primary">
+          🛍️ Explore DIYs
+        </a>
+
+        <a href="#contact" class="btn secondary">
+          💌 Contact Zaira
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+      <div class="hero-art-inner">
+
+        <div class="hero-heart">
+          💗
+        </div>
+
+        <h2>Zairas DIYS</h2>
+
+        <p>
+          Creativity • Fun • Love
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       SHOP
+  ========================= -->
+
+  <section id="shop">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        💕 Our Collection
+      </div>
+
+      <h2>Shop All DIYs</h2>
+
+      <p>
+        Discover creative DIY projects and products
+        made for anyone who loves to create.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product">
+
+        <div class="product-image">
+          🎨
+        </div>
+
+        <h3>Creative Art DIY</h3>
+
+        <p>
+          A fun creative project for anyone
+          who loves art.
+        </p>
+
+        <div class="price">
+          ₹299
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          🎀
+        </div>
+
+        <h3>Cute Craft DIY</h3>
+
+        <p>
+          Create something adorable and
+          completely your own.
+        </p>
+
+        <div class="price">
+          ₹349
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          💐
+        </div>
+
+        <h3>Flower DIY</h3>
+
+        <p>
+          A beautiful DIY project perfect
+          for decorating.
+        </p>
+
+        <div class="price">
+          ₹249
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          🧸
+        </div>
+
+        <h3>Fun DIY Project</h3>
+
+        <p>
+          A fun project for creative minds
+          and families.
+        </p>
+
+        <div class="price">
+          ₹299
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          💎
+        </div>
+
+        <h3>Special DIY</h3>
+
+        <p>
+          Make something unique, beautiful,
+          and personal.
+        </p>
+
+        <div class="price">
+          ₹449
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          🧵
+        </div>
+
+        <h3>Craft Kit</h3>
+
+        <p>
+          A creative project for anyone
+          who enjoys crafting.
+        </p>
+
+        <div class="price">
+          ₹399
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORIES
+  ========================= -->
+
+  <section id="categories">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        🎀 Explore
+      </div>
+
+      <h2>DIY For Everyone</h2>
+
+      <p>
+        Explore different types of creative
+        projects from Zairas DIYS.
+      </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+      <div class="category">
+        <div class="category-icon">🎨</div>
+        <h3>Art & Crafts</h3>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">🎀</div>
+        <h3>Cute DIYs</h3>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💐</div>
+        <h3>Decorations</h3>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">🧸</div>
+        <h3>Fun Projects</h3>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💎</div>
+        <h3>Creative Projects</h3>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">💕</div>
+        <h3>More DIYs</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT / OWNER
+  ========================= -->
+
+  <section id="about">
+
+    <div class="about-container">
+
+      <div class="owner-card">
+
+        <div class="owner-photo">
+          💗
+        </div>
+
+        <h3>
+          Zaira Mansur
+        </h3>
+
+        <p>
+          Founder & Owner of Zairas DIYS
+        </p>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <div class="eyebrow">
+          💖 Meet the Owner
+        </div>
+
+        <h2>
+          Meet Zaira Mansur
+        </h2>
+
+        <p>
+          <strong>Zaira Mansur</strong> is the founder
+          and owner of Zairas DIYS.
+        </p>
+
+        <p>
+          Zaira created Zairas DIYS to share the joy
+          of creativity and give people fun ways to
+          make something special with their own hands.
+        </p>
+
+        <p>
+          From colorful crafts to creative projects,
+          Zairas DIYS is all about imagination,
+          creativity, and having fun.
+        </p>
+
+        <div class="about-highlight">
+          💕 Creativity starts with an idea.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHY US
+  ========================= -->
+
+  <section id="why">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        ✨ Why Zairas?
+      </div>
+
+      <h2>
+        Why You'll Love Us
+      </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <div class="why-card">
+
+        <div class="icon">
+          💗
+        </div>
+
+        <h3>
+          Made With Love
+        </h3>
+
+        <p>
+          Creativity and care go into
+          every Zairas DIYS experience.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          🎨
+        </div>
+
+        <h3>
+          Creative
+        </h3>
+
+        <p>
+          Fun projects that encourage
+          imagination and creativity.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          ✨
+        </div>
+
+        <h3>
+          Unique
+        </h3>
+
+        <p>
+          Create something personal
+          and completely your own.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          💕
+        </div>
+
+        <h3>
+          For Everyone
+        </h3>
+
+        <p>
+          DIY fun for anyone who enjoys
+          making and creating.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       OWNER BANNER
+  ========================= -->
+
+  <section class="owner-banner">
+
+    <h2>
+      Zairas DIYS is proudly owned by
+      <span>Zaira Mansur 💗</span>
+    </h2>
+
+    <p>
+      Bringing creativity, imagination,
+      and DIY fun to life.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <h2>
+      Let's Create Something! 💕
+    </h2>
+
+    <p>
+      Have a question about Zairas DIYS?
+      Want to learn more about our DIYs?
+      Contact us directly!
+    </p>
+
+
+    <a
+      href="tel:+919538495747"
+      class="phone"
+    >
+      📞 +91 9538495747
+    </a>
+
+
+    <p class="contact-owner">
+      Direct contact with Zaira Mansur 💗
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      © 2026
+      <strong>Zairas DIYS</strong>
+      💕
+    </p>
+
+    <p style="margin-top:8px;">
+      Owned & created by
+      <strong>Zaira Mansur</strong>
+    </p>
+
+    <p style="margin-top:8px;">
+      Made with creativity & love.
+    </p>
+
+  </footer>
+
+</body>
+</html>
