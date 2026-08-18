@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zairas DIYS — Creative DIYs made with love by Zaira Mansur.">
+
+  <meta
+    name="description"
+    content="Zairas DIYS — Creative DIYs made with love by Zaira Mansur."
+  >
+
   <title>Zairas DIYS 💕 | Zaira Mansur</title>
 
   <style>
@@ -16,8 +21,8 @@
 
     body {
       font-family: "Poppins", Arial, sans-serif;
-      background: #fff4fa;
-      color: #4b1833;
+      background: #fff5fa;
+      color: #4d1835;
       overflow-x: hidden;
     }
 
@@ -27,9 +32,9 @@
 
     .heart {
       position: fixed;
-      bottom: -60px;
-      pointer-events: none;
+      bottom: -70px;
       z-index: 5;
+      pointer-events: none;
       opacity: 0;
       animation: floatHeart 10s linear infinite;
     }
@@ -71,11 +76,11 @@
       }
 
       15% {
-        opacity: 0.65;
+        opacity: .7;
       }
 
       85% {
-        opacity: 0.5;
+        opacity: .5;
       }
 
       100% {
@@ -94,12 +99,16 @@
       left: 0;
       width: 100%;
       z-index: 1000;
+
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+
       padding: 18px 7%;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(15px);
+
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(16px);
+
       border-bottom: 1px solid #ffd4e7;
     }
 
@@ -107,7 +116,7 @@
       color: #df327f;
       font-size: 25px;
       font-weight: 900;
-      letter-spacing: 0.5px;
+      letter-spacing: .5px;
     }
 
     .logo span {
@@ -124,7 +133,7 @@
       color: #64203f;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      transition: .3s;
     }
 
     nav ul a:hover {
@@ -137,13 +146,14 @@
 
     .hero {
       min-height: 100vh;
+
       padding: 150px 7% 90px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 60px;
-      position: relative;
-      overflow: hidden;
 
       background:
         radial-gradient(
@@ -156,30 +166,39 @@
           #ffe0ee 0,
           transparent 32%
         ),
-        #fff4fa;
+        #fff5fa;
+
+      overflow: hidden;
     }
 
     .hero-content {
       max-width: 650px;
-      position: relative;
-      z-index: 2;
+      z-index: 10;
     }
 
     .badge {
       display: inline-block;
+
       padding: 10px 18px;
+
       border-radius: 50px;
+
       background: #ffe1ed;
       color: #c62d72;
+
       font-weight: 800;
+
       margin-bottom: 22px;
     }
 
     .hero h1 {
       font-size: clamp(55px, 8vw, 100px);
-      line-height: 0.92;
+      line-height: .92;
+
       color: #c82d73;
+
       margin-bottom: 28px;
+
       letter-spacing: -3px;
     }
 
@@ -189,9 +208,12 @@
 
     .hero p {
       color: #75435d;
+
       font-size: 19px;
       line-height: 1.8;
+
       max-width: 600px;
+
       margin-bottom: 32px;
     }
 
@@ -207,17 +229,24 @@
 
     .btn {
       display: inline-block;
-      text-decoration: none;
+
       padding: 15px 27px;
+
       border-radius: 50px;
+
+      text-decoration: none;
+
       font-weight: 800;
-      transition: 0.3s;
+
+      transition: .3s;
     }
 
     .primary {
-      color: white;
       background: #e83e8c;
-      box-shadow: 0 12px 30px rgba(232,62,140,0.25);
+      color: white;
+
+      box-shadow:
+        0 12px 30px rgba(232,62,140,.25);
     }
 
     .primary:hover {
@@ -226,8 +255,9 @@
     }
 
     .secondary {
-      color: #d42e77;
       background: white;
+      color: #d42e77;
+
       border: 2px solid #ffc4dc;
     }
 
@@ -236,24 +266,33 @@
       transform: translateY(-4px);
     }
 
-    /* Hero Card */
+    /* HERO ART */
 
     .hero-art {
       width: min(430px, 90vw);
       height: 470px;
+
       border-radius: 45px;
-      background: linear-gradient(
-        145deg,
-        #ffafd0,
-        #ffe7f2
-      );
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffafd0,
+          #ffe7f2
+        );
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       position: relative;
+
       transform: rotate(3deg);
-      box-shadow: 0 30px 70px rgba(190,42,105,0.18);
-      z-index: 2;
+
+      box-shadow:
+        0 30px 70px rgba(190,42,105,.18);
+
+      z-index: 10;
     }
 
     .hero-art-inner {
@@ -263,14 +302,18 @@
 
     .hero-heart {
       font-size: 125px;
-      animation: heartbeat 2s ease-in-out infinite;
-      filter: drop-shadow(
-        0 15px 18px rgba(160,20,80,0.18)
-      );
+
+      animation:
+        heartbeat 2s ease-in-out infinite;
+
+      filter:
+        drop-shadow(
+          0 15px 18px rgba(160,20,80,.18)
+        );
     }
 
     @keyframes heartbeat {
-      0%,100% {
+      0%, 100% {
         transform: scale(1);
       }
 
@@ -281,13 +324,17 @@
 
     .hero-art h2 {
       margin-top: 10px;
+
       color: #b52467;
+
       font-size: 34px;
     }
 
     .hero-art p {
       margin-top: 8px;
+
       color: #824d66;
+
       font-size: 15px;
     }
 
@@ -308,22 +355,31 @@
 
     .eyebrow {
       color: #e83e8c;
+
       font-size: 13px;
+
       font-weight: 900;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
     }
 
     .section-heading h2 {
       color: #701d49;
-      font-size: clamp(38px, 5vw, 58px);
+
+      font-size: clamp(38px,5vw,58px);
+
       margin-top: 8px;
     }
 
     .section-heading p {
       max-width: 650px;
+
       margin: 13px auto 0;
+
       color: #86566d;
+
       line-height: 1.7;
     }
 
@@ -337,58 +393,79 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(230px, 1fr)
-      );
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(230px,1fr)
+        );
+
       gap: 25px;
     }
 
     .product {
       background: #fff8fc;
+
       border: 1px solid #ffd6e8;
+
       border-radius: 27px;
+
       padding: 18px;
-      transition: 0.35s;
+
+      transition: .35s;
     }
 
     .product:hover {
       transform: translateY(-9px);
+
       box-shadow:
-        0 20px 45px rgba(190,46,109,0.13);
+        0 20px 45px rgba(190,46,109,.13);
     }
 
     .product-image {
       height: 210px;
+
       border-radius: 20px;
-      background: linear-gradient(
-        135deg,
-        #ffd1e4,
-        #fff0f7
-      );
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffd1e4,
+          #fff0f7
+        );
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       font-size: 75px;
+
       margin-bottom: 18px;
     }
 
     .product h3 {
       color: #79204d;
+
       font-size: 21px;
+
       margin-bottom: 8px;
     }
 
     .product p {
       color: #8b6177;
+
       font-size: 14px;
+
       line-height: 1.6;
+
       margin-bottom: 14px;
     }
 
     .price {
       color: #df327f;
+
       font-size: 20px;
+
       font-weight: 900;
     }
 
@@ -402,30 +479,40 @@
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(180px,1fr)
-      );
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(180px,1fr)
+        );
+
       gap: 20px;
     }
 
     .category {
       background: white;
+
       border: 1px solid #ffd9e9;
+
       border-radius: 25px;
+
       text-align: center;
+
       padding: 30px 20px;
-      transition: 0.3s;
+
+      transition: .3s;
     }
 
     .category:hover {
       transform: translateY(-7px);
+
       box-shadow:
-        0 15px 35px rgba(190,40,100,0.1);
+        0 15px 35px rgba(190,40,100,.1);
     }
 
     .category-icon {
       font-size: 48px;
+
       margin-bottom: 13px;
     }
 
@@ -443,69 +530,98 @@
 
     .about-container {
       max-width: 1100px;
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+
+      grid-template-columns:
+        .9fr 1.1fr;
+
       align-items: center;
+
       gap: 65px;
     }
 
     .owner-card {
       padding: 55px 35px;
+
       text-align: center;
+
       border-radius: 38px;
+
       background:
         linear-gradient(
           145deg,
           #ffe0ed,
           #fff2f8
         );
+
       box-shadow:
-        0 20px 50px rgba(190,40,100,0.09);
+        0 20px 50px rgba(190,40,100,.09);
     }
 
     .owner-photo {
       width: 155px;
       height: 155px;
+
       border-radius: 50%;
+
       margin: 0 auto 20px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       background: white;
+
       border: 7px solid #ffc1da;
+
       font-size: 70px;
     }
 
     .owner-card h3 {
       color: #b72567;
+
       font-size: 28px;
     }
 
     .owner-card p {
       margin-top: 7px;
+
       color: #8a536c;
     }
 
     .about-text h2 {
       color: #701d49;
-      font-size: clamp(36px,5vw,55px);
+
+      font-size:
+        clamp(36px,5vw,55px);
+
       margin: 10px 0 22px;
     }
 
     .about-text p {
       color: #765269;
+
       line-height: 1.9;
+
       margin-bottom: 15px;
     }
 
     .about-highlight {
       display: inline-block;
+
       margin-top: 10px;
+
       padding: 12px 18px;
+
       border-radius: 15px;
+
       background: #fff0f7;
+
       color: #d42f78;
+
       font-weight: 800;
     }
 
@@ -519,17 +635,23 @@
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(210px,1fr)
-      );
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(210px,1fr)
+        );
+
       gap: 25px;
     }
 
     .why-card {
       padding: 33px 25px;
+
       text-align: center;
+
       border-radius: 26px;
+
       background: white;
     }
 
@@ -539,38 +661,91 @@
 
     .why-card h3 {
       color: #79204d;
+
       margin: 15px 0 8px;
     }
 
     .why-card p {
       color: #886075;
+
       font-size: 14px;
+
       line-height: 1.6;
     }
 
     /* =========================
-       OWNER BANNER
+       AADISH SPONSOR
     ========================= */
 
-    .owner-banner {
-      background: white;
+    .sponsor-section {
+      padding: 90px 7%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff,
+          #ffe5f1
+        );
+
       text-align: center;
-      padding: 65px 7%;
     }
 
-    .owner-banner h2 {
+    .sponsor-card {
+      max-width: 900px;
+
+      margin: auto;
+
+      padding: 60px 35px;
+
+      border-radius: 38px;
+
+      background: white;
+
+      border: 1px solid #ffd0e4;
+
+      box-shadow:
+        0 25px 60px rgba(190,40,100,.12);
+    }
+
+    .sponsor-label {
+      color: #e83e8c;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 14px;
+    }
+
+    .sponsor-card h2 {
       color: #701d49;
-      font-size: clamp(32px,5vw,50px);
+
+      font-size:
+        clamp(34px,5vw,55px);
+
+      margin-bottom: 15px;
     }
 
-    .owner-banner h2 span {
+    .sponsor-card h2 span {
       color: #e83e8c;
     }
 
-    .owner-banner p {
-      margin-top: 12px;
-      color: #87566d;
-      font-size: 17px;
+    .sponsor-card p {
+      max-width: 650px;
+
+      margin: auto;
+
+      color: #80556c;
+
+      line-height: 1.8;
+    }
+
+    .sponsor-heart {
+      font-size: 40px;
+
+      margin-top: 22px;
     }
 
     /* =========================
@@ -579,7 +754,9 @@
 
     #contact {
       text-align: center;
+
       color: white;
+
       background:
         radial-gradient(
           circle at 20% 20%,
@@ -594,30 +771,45 @@
     }
 
     #contact h2 {
-      font-size: clamp(40px,6vw,67px);
+      font-size:
+        clamp(40px,6vw,67px);
+
       margin-bottom: 15px;
     }
 
     #contact p {
       max-width: 650px;
+
       margin: auto;
+
       line-height: 1.7;
+
       font-size: 18px;
     }
 
     .phone {
       display: inline-block;
+
       margin: 30px 0;
+
       padding: 18px 32px;
+
       background: white;
+
       color: #d42f78;
+
       text-decoration: none;
+
       border-radius: 50px;
+
       font-size: 24px;
+
       font-weight: 900;
+
       box-shadow:
-        0 15px 35px rgba(100,0,50,0.15);
-      transition: 0.3s;
+        0 15px 35px rgba(100,0,50,.15);
+
+      transition: .3s;
     }
 
     .phone:hover {
@@ -625,7 +817,6 @@
     }
 
     .contact-owner {
-      margin-top: 10px;
       font-weight: 800;
     }
 
@@ -635,13 +826,49 @@
 
     footer {
       background: #541532;
+
       color: #ffd7e8;
+
       text-align: center;
-      padding: 30px 20px;
+
+      padding: 38px 20px;
     }
 
     footer strong {
-      color: #ff8fbd;
+      color: #ff91bd;
+    }
+
+    .footer-divider {
+      width: 80px;
+      height: 2px;
+
+      background: #ff76af;
+
+      margin: 22px auto;
+
+      border-radius: 20px;
+    }
+
+    .made-by {
+      font-size: 16px;
+
+      color: #ffd5e6;
+    }
+
+    .made-by strong {
+      color: #ff91bd;
+    }
+
+    .sponsored-by {
+      margin-top: 8px;
+
+      font-size: 13px;
+
+      color: #eeb3cb;
+    }
+
+    .sponsored-by strong {
+      color: #ff91bd;
     }
 
     /* =========================
@@ -660,8 +887,11 @@
 
       .hero {
         flex-direction: column;
+
         text-align: center;
-        padding: 135px 5% 80px;
+
+        padding:
+          135px 5% 80px;
       }
 
       .hero p {
@@ -699,6 +929,10 @@
       .phone {
         font-size: 19px;
       }
+
+      .sponsor-card {
+        padding: 45px 22px;
+      }
     }
   </style>
 </head>
@@ -718,6 +952,7 @@
   ========================= -->
 
   <nav>
+
     <div class="logo">
       Zairas <span>DIYS 💕</span>
     </div>
@@ -730,6 +965,7 @@
       <li><a href="#why">Why Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
 
@@ -752,12 +988,14 @@
       </h1>
 
       <p>
-        Welcome to <strong>Zairas DIYS</strong> — a creative
-        destination filled with fun DIYs, crafts, and projects
-        made for people who love creating something special.
+        Welcome to <strong>Zairas DIYS</strong> —
+        a creative destination filled with fun DIYs,
+        crafts, and projects made for people who
+        love creating something special.
       </p>
 
       <div class="buttons">
+
         <a href="#shop" class="btn primary">
           🛍️ Explore DIYs
         </a>
@@ -765,6 +1003,7 @@
         <a href="#contact" class="btn secondary">
           💌 Contact Zaira
         </a>
+
       </div>
 
     </div>
@@ -778,7 +1017,9 @@
           💗
         </div>
 
-        <h2>Zairas DIYS</h2>
+        <h2>
+          Zairas DIYS
+        </h2>
 
         <p>
           Creativity • Fun • Love
@@ -803,7 +1044,9 @@
         💕 Our Collection
       </div>
 
-      <h2>Shop All DIYs</h2>
+      <h2>
+        Shop All DIYs
+      </h2>
 
       <p>
         Discover creative DIY projects and products
@@ -821,7 +1064,9 @@
           🎨
         </div>
 
-        <h3>Creative Art DIY</h3>
+        <h3>
+          Creative Art DIY
+        </h3>
 
         <p>
           A fun creative project for anyone
@@ -841,7 +1086,9 @@
           🎀
         </div>
 
-        <h3>Cute Craft DIY</h3>
+        <h3>
+          Cute Craft DIY
+        </h3>
 
         <p>
           Create something adorable and
@@ -861,7 +1108,9 @@
           💐
         </div>
 
-        <h3>Flower DIY</h3>
+        <h3>
+          Flower DIY
+        </h3>
 
         <p>
           A beautiful DIY project perfect
@@ -881,7 +1130,9 @@
           🧸
         </div>
 
-        <h3>Fun DIY Project</h3>
+        <h3>
+          Fun DIY Project
+        </h3>
 
         <p>
           A fun project for creative minds
@@ -901,7 +1152,9 @@
           💎
         </div>
 
-        <h3>Special DIY</h3>
+        <h3>
+          Special DIY
+        </h3>
 
         <p>
           Make something unique, beautiful,
@@ -921,7 +1174,9 @@
           🧵
         </div>
 
-        <h3>Craft Kit</h3>
+        <h3>
+          Craft Kit
+        </h3>
 
         <p>
           A creative project for anyone
@@ -951,7 +1206,9 @@
         🎀 Explore
       </div>
 
-      <h2>DIY For Everyone</h2>
+      <h2>
+        DIY For Everyone
+      </h2>
 
       <p>
         Explore different types of creative
@@ -999,7 +1256,7 @@
 
 
   <!-- =========================
-       ABOUT / OWNER
+       ABOUT ZAIRA
   ========================= -->
 
   <section id="about">
@@ -1062,7 +1319,7 @@
 
 
   <!-- =========================
-       WHY US
+       WHY ZAIRAS
   ========================= -->
 
   <section id="why">
@@ -1159,20 +1416,34 @@
 
 
   <!-- =========================
-       OWNER BANNER
+       AADISH TECH CREATIONS
+       SPONSOR ADVERTISEMENT
   ========================= -->
 
-  <section class="owner-banner">
+  <section class="sponsor-section">
 
-    <h2>
-      Zairas DIYS is proudly owned by
-      <span>Zaira Mansur 💗</span>
-    </h2>
+    <div class="sponsor-card">
 
-    <p>
-      Bringing creativity, imagination,
-      and DIY fun to life.
-    </p>
+      <div class="sponsor-label">
+        ✨ PROUDLY SPONSORED BY
+      </div>
+
+      <h2>
+        Aadish Tech <span>Creations</span>
+      </h2>
+
+      <p>
+        This website is proudly sponsored by
+        <strong>Aadish Tech Creations</strong> —
+        helping businesses, creators, and entrepreneurs
+        bring their ideas to the digital world.
+      </p>
+
+      <div class="sponsor-heart">
+        💗
+      </div>
+
+    </div>
 
   </section>
 
@@ -1210,7 +1481,7 @@
 
 
   <!-- =========================
-       FOOTER
+       FINAL FOOTER
   ========================= -->
 
   <footer>
@@ -1226,8 +1497,17 @@
       <strong>Zaira Mansur</strong>
     </p>
 
-    <p style="margin-top:8px;">
-      Made with creativity & love.
+    <div class="footer-divider"></div>
+
+    <p class="made-by">
+      Website made by
+      <strong>Aadish Tech Creations</strong>
+      💻✨
+    </p>
+
+    <p class="sponsored-by">
+      Proudly sponsored by
+      <strong>Aadish Tech Creations</strong>
     </p>
 
   </footer>
